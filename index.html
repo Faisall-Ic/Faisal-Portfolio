@@ -3,19 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style/style.css">
     <title>Faisal Portfolio</title>
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"> -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
 </head>
   <body class="bg-stone-100">
     <!-- Hero Section Start -->
-        <section class="bg-[url(/img/faisal-hero.png)] bg-cover bg-no-repeat bg-center min-h-screen">
+        <section class="bg-[url(/img/foto-faisal-hero.jpg)] bg-cover bg-no-repeat bg-center min-h-screen">
             <div class="flex flex-col text-start ms-230 pt-46">
-                <h1 class="font-montse text-9xl font-semibold tracking-tight leading-25 opacity-30">Faisal</h1>
+                <h1 class="faisal font-montse text-9xl font-semibold leading-25 opacity-30">Faisal</h1>
                 <h3 class="text-3xl line tracking-wider ps-2 opacity-20">M U H A M A D</h3>
             </div>
             <!-- <div class="mt-120 h-25 w-full bg-linear-to-t from-white to-0"> -->
@@ -30,43 +30,171 @@
                     <img src="img/logo-nav.png" class="w-40 " alt="Logo Faisal" />
                 </a>
                 <div class="flex md:order-2 md:space-x-0 rtl:space-x-reverse">
-                    <button type="button" class="text-white bg-blue-900 hover:bg-amber-200 hover:text-blue-900 font-medium rounded-lg text-sm px-5 py-3 text-center">Get My Contact</button>
+                    <button type="button" class="duration-300 text-white bg-[var(--biru)] hover:bg-[var(--coklat)] font-medium rounded-lg text-sm px-5 py-3 text-center">Get My Contact</button>
                 </div>
             </div>
         </nav>
     </section>
     <!-- Nav Section End -->
     <!-- About Section Start -->
-     <section class="-z-1 bg-[url(/img/bg-grid.png)] bg-cover bg-center min-h-screen py-40">
+     <section class="-z-1 bg-[url(/img/bg-grid.png)] bg-cover bg-center min-h-screen py-50">
         <div class=""></div>
         <div class="ms-76 bg-[url(/img/foto-about.jpg)] bg-auto bg-left bg-no-repeat w-110 h-110 rounded-br-4xl">
             <div class="absolute">  
-                <h1 class="font-about bg-orange-300 text-6xl text-white px-1 py-0.5 ms-100 mt-1.5 absolute w-130">Hi, i'm Faisal. it's so</h1>
-                <h1 class=" bg-orange-300 text-6xl text-white px-1 leading-12 pb-5 ms-100 mt-19  absolute w-146">good to see you here</h1>
+                <h1 class="font-about bg-[var(--coklat)] text-6xl text-white px-1 pb-2 py-0.5 ms-100 mt-1.5 absolute w-134">Hi, i'm Faisal. it's so</h1>
+                <h1 class="font-about bg-[var(--coklat)] text-6xl text-white px-1 leading-14 pb-4 ms-100 mt-20  absolute w-140">good to see you here</h1>
             </div>
             <div class="text-lg tracking-wider ms-122 mt-50 absolute w-128 leading-6 font-normal">
-                <p>Passionate about web development, I create modern, fast, and user-friendly websites that blend creativity and functionality. Always exploring new ideas, I strive to push boundaries in design and performance to deliver impactful digital experiences. 
+                <p>Passionate about <span class="font-semibold">web development</span>, I create modern, fast, and user-friendly websites that blend creativity and functionality. Always exploring new ideas, I strive to push boundaries in design and performance to deliver impactful digital experiences. 
                     <br><br>Let’s build something amazing together.</p>
             </div>
         </div>
      </section>
     <!-- About Section End -->
     <!-- Project Section Start -->
-    <div class="flex w-full justify-center h-screen items-center">
-        <div class="relative grid h-[35rem] max-w-lg flex-col items-end justify-center overflow-hidden rounded-lg bg-white">
-                <div class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-[url('https://images.unsplash.com/photo-1552960562-daf630e9278b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')] bg-cover bg-center">
-                <div class="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50"></div>
+    <div class="min-h-fit mb-30">
+        <div class="bg-gray-400"></div>
+        <h1 class="text-6xl font-semibold text-center mt-25 w-fit ps-65 pe-5 pb-4 pt-2  text-white bg-[var(--biru)]">Things I've Built</h1>
+            <div class="flex min-w-full pt-20 justify-center gap-10">
+                <div class="w-115 bg-[url(/img/project1.png)] bg-cover bg-no-repeat bg-center h-60 rounded-xl">
+                    <div class="-z-10  h-60 w-full bg-linear-to-t from-black to-0 opacity-0 hover:opacity-100 hover:z-10 rounded-b-xl duration-700">
+                        <h4 class="absolute text-white font-semibold text-2xl pt-42 ps-7">Wedding Invitation</h4>
+                        <p class="absolute text-white font-light text-sm pt-50 ps-7">An elegant digital invite with RSVP.</p>
+                        <button class="absolute text-white font-semibold bg-[var(--biru)] hover:bg-[var(--coklat)] duration-300 px-3.5 py-1 rounded-md mt-47 ms-85"><a href="">See More</a></button>
+                    </div>
+                </div>
+                <div class="w-115 bg-[url(/img/project1.png)] bg-cover bg-no-repeat bg-center h-60 rounded-xl">
+                    <div class="-z-10 h-60 w-full bg-linear-to-t from-black to-0 opacity-0 hover:opacity-100 hover:z-10 rounded-b-xl duration-700">
+                        <h4 class="absolute text-white font-semibold text-2xl pt-42 ps-7">Wedding Invitation</h4>
+                        <p class="absolute text-white font-light text-sm pt-50 ps-7">An elegant digital invite with RSVP.</p>
+                        <button class="absolute text-white font-semibold bg-[var(--biru)] hover:bg-[var(--coklat)] duration-300 px-3.5 py-1 rounded-md mt-47 ms-85"><a href="">See More</a></button>
+                    </div>
+                </div>
             </div>
-            <div class="relative text-center p-6 px-6 py-14 md:px-12">
-                <h2 class="mb-6 text-3xl font-medium text-white">
-                    How we design and code open-source projects?
-                </h2>
-                <h5 class="mb-4 text-xl font-semibold text-slate-300">
-                    Lewis Daniel
-                </h5>
+            <div class="flex min-w-full pt-10 justify-center gap-10">
+                <div class="w-115 bg-[url(/img/project1.png)] bg-cover bg-no-repeat bg-center h-60 rounded-xl">
+                    <div class="-z-10  h-60 w-full bg-linear-to-t from-black to-0 opacity-0 hover:opacity-100 hover:z-10 rounded-b-xl duration-700">
+                        <h4 class="absolute text-white font-semibold text-2xl pt-42 ps-7">Wedding Invitation</h4>
+                        <p class="absolute text-white font-light text-sm pt-50 ps-7">An elegant digital invite with RSVP.</p>
+                        <button class="absolute text-white font-semibold bg-[var(--biru)] hover:bg-[var(--coklat)] duration-300 px-3.5 py-1 rounded-md mt-47 ms-85"><a href="">See More</a></button>
+                    </div>
+                </div>
+                <div class="w-115 bg-[url(/img/project1.png)] bg-cover bg-no-repeat bg-center h-60 rounded-xl">
+                    <div class="-z-10 h-60 w-full bg-linear-to-t from-black to-0 opacity-0 hover:opacity-100 hover:z-10 rounded-b-xl duration-700">
+                        <h4 class="absolute text-white font-semibold text-2xl pt-42 ps-7">Wedding Invitation</h4>
+                        <p class="absolute text-white font-light text-sm pt-50 ps-7">An elegant digital invite with RSVP.</p>
+                        <button class="absolute text-white font-semibold bg-[var(--biru)] hover:bg-[var(--coklat)] duration-300 px-3.5 py-1 rounded-md mt-47 ms-85"><a href="">See More</a></button>
+                    </div>
+                </div>
             </div>
-        </div>
+            <div class="flex min-w-full pt-10 justify-center gap-10">
+                <div class="w-115 bg-[url(/img/project1.png)] bg-cover bg-no-repeat bg-center h-60 rounded-xl">
+                    <div class="-z-10  h-60 w-full bg-linear-to-t from-black to-0 opacity-0 hover:opacity-100 hover:z-10 rounded-b-xl duration-700">
+                        <h4 class="absolute text-white font-semibold text-2xl pt-42 ps-7">Wedding Invitation</h4>
+                        <p class="absolute text-white font-light text-sm pt-50 ps-7">An elegant digital invite with RSVP.</p>
+                        <button class="absolute text-white font-semibold bg-[var(--biru)] hover:bg-[var(--coklat)] duration-300 px-3.5 py-1 rounded-md mt-47 ms-85"><a href="">See More</a></button>
+                    </div>
+                </div>
+                <div class="w-115 bg-[url(/img/project1.png)] bg-cover bg-no-repeat bg-center h-60 rounded-xl">
+                    <div class="-z-10 h-60 w-full bg-linear-to-t from-black to-0 opacity-0 hover:opacity-100 hover:z-10 rounded-b-xl duration-700">
+                        <h4 class="absolute text-white font-semibold text-2xl pt-42 ps-7">Wedding Invitation</h4>
+                        <p class="absolute text-white font-light text-sm pt-50 ps-7">An elegant digital invite with RSVP.</p>
+                        <button class="absolute text-white font-semibold bg-[var(--biru)] hover:bg-[var(--coklat)] duration-300 px-3.5 py-1 rounded-md mt-47 ms-85"><a href="">See More</a></button>
+                    </div>
+                </div>
+            </div>
     </div>
     <!-- Project Section End -->
+    <!-- Skills Section Start -->
+    <span class="flex justify-center w-full h-3  relative bg-[var(--biru)]"></span>
+    <h1 class="text-6xl font-semibold text-start mt-25 ms-180 w-200 ps-5 pe-5 pb-4 pt-2  text-white bg-[var(--coklat)]">Tools & Technologies I Use</h1>
+    <section class="bg-gray-100 py-12" id="tech-stack">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+          <!-- <p class="text-gray-600 mb-10">Some tools and technologies I’ve been working with recently</p> -->
+          
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 items-center justify-center mt-15">
+            <div class="flex flex-col items-center">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="w-12 h-12 mb-2">
+              <span class="text-sm text-gray-700">HTML5</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="w-12 h-12 mb-2">
+              <span class="text-sm text-gray-700">CSS3</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="Node.js" class="w-12 h-12 mb-2">
+              <span class="text-sm text-gray-700">PHP</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-12 h-12 mb-2">
+              <span class="text-sm text-gray-700">JavaScript</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="React" class="w-12 h-12 mb-2">
+              <span class="text-sm text-gray-700">Bootstrap</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Next.js" class="w-12 h-12 mb-2 bg-black rounded">
+              <span class="text-sm text-gray-700">Python</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <img src="/logos/vecteezy_icon-free-logo-tailwind_53066819.png" alt="Tailwind CSS" class="w-12 h-12 mb-2">
+              <span class="text-sm text-gray-700">Tailwind CSS</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="github" class="w-12 h-12 mb-2">
+              <span class="text-sm text-gray-700">Github</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- Skills Section End -->
+    <!-- Contact Section Start -->
+     <section class="bg-[var(--coklat)] flex items-center justify-center min-h-100">
+        <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+            <p class="text-green-700 mb-2">
+            How can we help you?
+            </p>
+            <h1 class="text-4xl font-bold mb-4">
+            Contact us
+            </h1>
+            <p class="text-gray-700 mb-4">
+            We're here to help and answer any questions you might have. We look forward to hearing from you!
+            </p>
+            <div class="flex items-center mb-2">
+            <i class="fas fa-map-marker-alt text-gray-700 mr-2">
+            </i>
+            <p class="text-gray-700">
+            Ankersgade 12C, 1, 8000 Aarhus
+            </p>
+            </div>
+            <div class="flex items-center mb-2">
+            <i class="fas fa-phone-alt text-gray-700 mr-2">
+            </i>
+            <p class="text-gray-700">
+            +45 71 99 77 07
+            </p>
+            </div>
+            <div class="flex items-center">
+            <i class="fas fa-envelope text-gray-700 mr-2">
+            </i>
+            <a class="text-blue-600" href="mailto:mail@sleeknote.com">
+            mail@sleeknote.com
+            </a>
+            </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+            <img alt="Illustration of a person holding a sign that says 'Hello'" class="w-64 h-64" height="300" src="https://storage.googleapis.com/a1aa/image/5da4yxJVD6pDBe0QU6rWaeykDHkXrwb1l5jL9ymXMDA.jpg" width="300"/>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section End -->
+    <!-- Footer Section Start -->
+     
+
+
+    <!-- Footer Section End -->
+    
   </body>
 </html>

@@ -11,4 +11,11 @@
     font-family: "Playfair Display", serif !important;
 }
 
+.faisal{
+    letter-spacing: -7px;
+}
 
+:root{
+    --coklat: #cbad93;
+    --biru: #62838b;
+}
