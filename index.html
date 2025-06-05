@@ -5,27 +5,169 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style/style.css">
     <title>Faisal Portfolio</title>
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"> -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      /* Hero Section Positioning */
+      .hero-container {
+        position: relative;
+        min-height: 100vh;
+      }
+      .hero-text {
+        position: absolute;
+        right: 15%;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: right;
+      }
+      
+      /* About Section Layout */
+      .about-container {
+        display: flex;
+        flex-direction: column;
+      }
+      .about-image {
+        width: 100%;
+        height: auto;
+      }
+      .about-content {
+        padding: 2rem;
+        margin-top: 1rem;
+      }
+      
+      /* Project Title Styling */
+      .project-title {
+        position: relative;
+        left: -2rem;
+        padding-left: 2rem;
+        width: calc(100% + 2rem);
+      }
+      
+      @media (max-width: 1024px) {
+        .hero-text {
+          right: 10%;
+        }
+        .ms-230 { margin-left: 120px; }
+        .ms-76 { margin-left: 40px; }
+        .ms-100 { margin-left: 60px; }
+        .ms-122 { margin-left: 80px; }
+        .ms-180 { margin-left: 100px; }
+        .w-110, .h-110 { width: 90%; height: 500px; }
+        .w-128 { width: 80%; }
+        .w-134, .w-140 { width: 90%; }
+        .pt-46 { padding-top: 80px; }
+        .mt-50 { margin-top: 120px; }
+        .mt-20 { margin-top: 60px; }
+        .mt-1\.5 { margin-top: 10px; }
+        .ps-65 { padding-left: 40px; padding-right: 40px; }
+        .ps-2 { padding-left: 10px; }
+        .text-9xl { font-size: 6rem; line-height: 1; }
+        .text-6xl { font-size: 3rem; }
+        .text-3xl { font-size: 1.5rem; }
+        .leading-25 { line-height: 1.2; }
+        .leading-14 { line-height: 1.2; }
+        .w-115 { width: 90%; max-width: 400px; }
+        .h-60 { height: 200px; }
+        .pt-42 { padding-top: 100px; }
+        .pt-50 { padding-top: 110px; }
+        .mt-47 { margin-top: 100px; }
+        .ms-85 { margin-left: 60%; }
+        .gap-10 { gap: 20px; }
+        .ps-7 { padding-left: 20px; }
+      }
+
+      @media (max-width: 768px) {
+        .hero-text {
+          right: 5%;
+          top: 40%;
+        }
+        .ms-230 { margin-left: 60px; }
+        .ms-76 { margin-left: 20px; }
+        .ms-100 { margin-left: 30px; }
+        .ms-122 { margin-left: 40px; }
+        .ms-180 { margin-left: 50px; }
+        .w-110, .h-110 { width: 95%; height: 400px; }
+        .w-128 { width: 85%; }
+        .w-134, .w-140 { width: 95%; }
+        .pt-46 { padding-top: 60px; }
+        .mt-50 { margin-top: 100px; }
+        .mt-20 { margin-top: 40px; }
+        .mt-1\.5 { margin-top: 5px; }
+        .ps-65 { padding-left: 30px; padding-right: 30px; }
+        .text-9xl { font-size: 4rem; }
+        .text-6xl { font-size: 2.5rem; }
+        .text-3xl { font-size: 1.25rem; }
+        .w-115 { width: 95%; max-width: 350px; }
+        .h-60 { height: 180px; }
+        .pt-42 { padding-top: 80px; }
+        .pt-50 { padding-top: 90px; }
+        .mt-47 { margin-top: 80px; }
+        .ms-85 { margin-left: 50%; }
+        .gap-10 { gap: 15px; }
+        .flex.min-w-full {
+          flex-direction: column;
+          align-items: center;
+        }
+        .md\:flex-row {
+          flex-direction: column;
+        }
+        .md\:w-1\/2 {
+          width: 100%;
+        }
+        .md\:pl-24, .md\:pr-16 {
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+        .h-72, .w-72 {
+          height: 250px;
+          width: 250px;
+          margin-top: 2rem;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .hero-text {
+          right: 5%;
+          top: 35%;
+          transform: none;
+        }
+        .ms-230 { margin-left: 30px; }
+        .ms-76 { margin-left: 10px; }
+        .ms-100 { margin-left: 15px; }
+        .ms-122 { margin-left: 20px; }
+        .ms-180 { margin-left: 25px; }
+        .w-110, .h-110 { width: 98%; height: 350px; }
+        .w-128 { width: 90%; }
+        .w-134, .w-140 { width: 98%; }
+        .pt-46 { padding-top: 40px; }
+        .mt-50 { margin-top: 80px; }
+        .mt-20 { margin-top: 30px; }
+        .text-9xl { font-size: 3rem; }
+        .text-6xl { font-size: 2rem; }
+        .text-3xl { font-size: 1rem; }
+        .w-115 { width: 98%; max-width: 300px; }
+        .h-60 { height: 150px; }
+        .pt-42 { padding-top: 60px; }
+        .pt-50 { padding-top: 70px; }
+        .mt-47 { margin-top: 60px; }
+        .ms-85 { margin-left: 40%; }
+        .gap-10 { gap: 10px; }
+      }
+    </style>
 </head>
   <body class="bg-stone-100">
     <!-- Hero Section Start -->
-        <section class="bg-[url(/img/foto-faisal-hero.jpg)] bg-cover bg-no-repeat bg-center min-h-screen">
-            <div class="flex flex-col text-start ms-230 pt-46">
-                <h1 class="faisal font-montse text-9xl font-semibold leading-25 opacity-30">Faisal</h1>
-                <h3 class="text-3xl line tracking-wider ps-2 opacity-20">M U H A M A D</h3>
-            </div>
-            <!-- <div class="mt-120 h-25 w-full bg-linear-to-t from-white to-0"> -->
+        <section class="hero-container bg-[url(/img/foto-faisal-hero.jpg)] bg-cover bg-no-repeat bg-center">
+            <div class="hero-text">
+                <h1 class="faisal font-b text-9xl font-light leading-25 opacity-30">Faisal</h1>
+                <h3 class="text-3xl line tracking-wider opacity-20">M U H A M A D</h3>
             </div>
         </section>
     <!-- Hero Section End -->
     <!-- Nav Section Start -->
     <section class="">
         <nav class="bg-white dark:bg-gray-900 drop-shadow-md">
-            <div class="max-w-screen-xl flex flex-wrap items-center justify-around mx-auto">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-around mx-auto p-4">
                 <a href="https://instagram.com/faisall4.0/" class="flex items-center rtl:space-x-reverse">
                     <img src="img/logo-nav.png" class="w-40 " alt="Logo Faisal" />
                 </a>
@@ -38,24 +180,23 @@
     <!-- Nav Section End -->
     <!-- About Section Start -->
      <section class="-z-1 bg-[url(/img/bg-grid.png)] bg-cover bg-center min-h-screen py-50">
-        <div class=""></div>
-        <div class="ms-76 bg-[url(/img/foto-about.jpg)] bg-auto bg-left bg-no-repeat w-110 h-110 rounded-br-4xl">
-            <div class="absolute">  
-                <h1 class="font-about bg-[var(--coklat)] text-6xl text-white px-1 pb-2 py-0.5 ms-100 mt-1.5 absolute w-134">Hi, i'm Faisal. it's so</h1>
-                <h1 class="font-about bg-[var(--coklat)] text-6xl text-white px-1 leading-14 pb-4 ms-100 mt-20  absolute w-140">good to see you here</h1>
-            </div>
-            <div class="text-lg tracking-wider ms-122 mt-50 absolute w-128 leading-6 font-normal">
-                <p>Passionate about <span class="font-semibold">web development</span>, I create modern, fast, and user-friendly websites that blend creativity and functionality. Always exploring new ideas, I strive to push boundaries in design and performance to deliver impactful digital experiences. 
-                    <br><br>Let’s build something amazing together.</p>
+        <div class="about-container ms-76">
+            <div class="about-image bg-[url(/img/foto-about.jpg)] bg-contain bg-left bg-no-repeat w-full h-110 rounded-br-4xl"></div>
+            <div class="about-content">
+                <h1 class="font-about text-6xl text-[var(--coklat)]">Hi, I'm Faisal. It's so good to see you here</h1>
+                <div class="text-lg tracking-wider mt-8 leading-6 font-normal">
+                    <p>Passionate about <span class="font-semibold">web development</span>, I create modern, fast, and user-friendly websites that blend creativity and functionality. Always exploring new ideas, I strive to push boundaries in design and performance to deliver impactful digital experiences. 
+                        <br><br>Let's build something amazing together.</p>
+                </div>
             </div>
         </div>
      </section>
     <!-- About Section End -->
     <!-- Project Section Start -->
-    <div class="min-h-fit mb-30">
+    <div class="min-h-fit mb-30 px-4">
         <div class="bg-gray-400"></div>
-        <h1 class="text-6xl font-semibold text-center mt-25 w-fit ps-65 pe-5 pb-4 pt-2  text-white bg-[var(--biru)]">Things I've Built</h1>
-            <div class="flex min-w-full pt-20 justify-center gap-10">
+        <h1 class="project-title text-6xl font-semibold text-center mt-25 w-fit ps-65 pe-5 pb-4 pt-2 text-white bg-[var(--biru)]">Things I've Built</h1>
+            <div class="flex min-w-full pt-20 justify-center gap-10 flex-wrap">
                 <div class="w-115 bg-[url(/img/project1.png)] bg-cover bg-no-repeat bg-center h-60 rounded-xl">
                     <div class="-z-10  h-60 w-full bg-linear-to-t from-black to-0 opacity-0 hover:opacity-100 hover:z-10 rounded-b-xl duration-700">
                         <h4 class="absolute text-white font-semibold text-2xl pt-42 ps-7">Wedding Invitation</h4>
@@ -63,42 +204,55 @@
                         <button class="absolute text-white font-semibold bg-[var(--biru)] hover:bg-[var(--coklat)] duration-300 px-3.5 py-1 rounded-md mt-47 ms-85"><a href="">See More</a></button>
                     </div>
                 </div>
-                <div class="w-115 bg-[url(/img/project1.png)] bg-cover bg-no-repeat bg-center h-60 rounded-xl">
+                <div class="w-115 bg-[url(/img/project2.png)] bg-cover bg-no-repeat bg-center h-60 rounded-xl">
                     <div class="-z-10 h-60 w-full bg-linear-to-t from-black to-0 opacity-0 hover:opacity-100 hover:z-10 rounded-b-xl duration-700">
-                        <h4 class="absolute text-white font-semibold text-2xl pt-42 ps-7">Wedding Invitation</h4>
-                        <p class="absolute text-white font-light text-sm pt-50 ps-7">An elegant digital invite with RSVP.</p>
+                        <h4 class="absolute text-white font-semibold text-2xl pt-42 ps-7">Travel Landing Page</h4>
+                        <p class="absolute text-white font-light text-sm pt-50 ps-7">A modern landing page design for a travel website.</p>
                         <button class="absolute text-white font-semibold bg-[var(--biru)] hover:bg-[var(--coklat)] duration-300 px-3.5 py-1 rounded-md mt-47 ms-85"><a href="">See More</a></button>
                     </div>
                 </div>
-            </div>
-            <div class="flex min-w-full pt-10 justify-center gap-10">
-                <div class="w-115 bg-[url(/img/project1.png)] bg-cover bg-no-repeat bg-center h-60 rounded-xl">
+            
+                <div class="w-115 bg-[url(/img/project3.png)] bg-cover bg-no-repeat bg-center h-60 rounded-xl">
                     <div class="-z-10  h-60 w-full bg-linear-to-t from-black to-0 opacity-0 hover:opacity-100 hover:z-10 rounded-b-xl duration-700">
-                        <h4 class="absolute text-white font-semibold text-2xl pt-42 ps-7">Wedding Invitation</h4>
-                        <p class="absolute text-white font-light text-sm pt-50 ps-7">An elegant digital invite with RSVP.</p>
+                        <h4 class="absolute text-white font-semibold text-2xl pt-42 ps-7">Dashboard CIS</h4>
+                        <p class="absolute text-white font-light text-sm pt-50 ps-7">An admin dashboard interface for a campus information system.</p>
                         <button class="absolute text-white font-semibold bg-[var(--biru)] hover:bg-[var(--coklat)] duration-300 px-3.5 py-1 rounded-md mt-47 ms-85"><a href="">See More</a></button>
                     </div>
                 </div>
-                <div class="w-115 bg-[url(/img/project1.png)] bg-cover bg-no-repeat bg-center h-60 rounded-xl">
+                <div class="w-115 bg-[url(/img/project4.png)] bg-cover bg-no-repeat bg-center h-60 rounded-xl">
                     <div class="-z-10 h-60 w-full bg-linear-to-t from-black to-0 opacity-0 hover:opacity-100 hover:z-10 rounded-b-xl duration-700">
-                        <h4 class="absolute text-white font-semibold text-2xl pt-42 ps-7">Wedding Invitation</h4>
-                        <p class="absolute text-white font-light text-sm pt-50 ps-7">An elegant digital invite with RSVP.</p>
+                        <h4 class="absolute text-white font-semibold text-2xl pt-42 ps-7">Dashboard Voting Ketos</h4>
+                        <p class="absolute text-white font-light text-sm pt-50 ps-7">A web-based voting system for student council elections.</p>
                         <button class="absolute text-white font-semibold bg-[var(--biru)] hover:bg-[var(--coklat)] duration-300 px-3.5 py-1 rounded-md mt-47 ms-85"><a href="">See More</a></button>
                     </div>
                 </div>
-            </div>
-            <div class="flex min-w-full pt-10 justify-center gap-10">
-                <div class="w-115 bg-[url(/img/project1.png)] bg-cover bg-no-repeat bg-center h-60 rounded-xl">
+            
+                <div class="w-115 bg-[url(/img/project5.png)] bg-cover bg-no-repeat bg-center h-60 rounded-xl">
                     <div class="-z-10  h-60 w-full bg-linear-to-t from-black to-0 opacity-0 hover:opacity-100 hover:z-10 rounded-b-xl duration-700">
-                        <h4 class="absolute text-white font-semibold text-2xl pt-42 ps-7">Wedding Invitation</h4>
-                        <p class="absolute text-white font-light text-sm pt-50 ps-7">An elegant digital invite with RSVP.</p>
+                        <h4 class="absolute text-white font-semibold text-2xl pt-42 ps-7">Bootstrap Portfolio</h4>
+                        <p class="absolute text-white font-light text-sm pt-50 ps-7">A responsive personal portfolio built with Bootstrap.</p>
                         <button class="absolute text-white font-semibold bg-[var(--biru)] hover:bg-[var(--coklat)] duration-300 px-3.5 py-1 rounded-md mt-47 ms-85"><a href="">See More</a></button>
                     </div>
                 </div>
-                <div class="w-115 bg-[url(/img/project1.png)] bg-cover bg-no-repeat bg-center h-60 rounded-xl">
+                <div class="w-115 bg-[url(/img/project6.png)] bg-cover bg-no-repeat bg-center h-60 rounded-xl">
                     <div class="-z-10 h-60 w-full bg-linear-to-t from-black to-0 opacity-0 hover:opacity-100 hover:z-10 rounded-b-xl duration-700">
-                        <h4 class="absolute text-white font-semibold text-2xl pt-42 ps-7">Wedding Invitation</h4>
-                        <p class="absolute text-white font-light text-sm pt-50 ps-7">An elegant digital invite with RSVP.</p>
+                        <h4 class="absolute text-white font-semibold text-2xl pt-42 ps-7">Tech Educa Landing Page</h4>
+                        <p class="absolute text-white font-light text-sm pt-50 ps-7">An educational website concept for learning tech topics.</p>
+                        <button class="absolute text-white font-semibold bg-[var(--biru)] hover:bg-[var(--coklat)] duration-300 px-3.5 py-1 rounded-md mt-47 ms-85"><a href="">See More</a></button>
+                    </div>
+                </div>
+            
+                <div class="w-115 bg-[url(/img/project7.png)] bg-cover bg-no-repeat bg-center h-60 rounded-xl">
+                    <div class="-z-10  h-60 w-full bg-linear-to-t from-black to-0 opacity-0 hover:opacity-100 hover:z-10 rounded-b-xl duration-700">
+                        <h4 class="absolute text-white font-semibold text-2xl pt-42 ps-7">Dashboard Perpustakaan</h4>
+                        <p class="absolute text-white font-light text-sm pt-50 ps-7">A library management dashboard for tracking books and users.</p>
+                        <button class="absolute text-white font-semibold bg-[var(--biru)] hover:bg-[var(--coklat)] duration-300 px-3.5 py-1 rounded-md mt-47 ms-85"><a href="">See More</a></button>
+                    </div>
+                </div>
+                <div class="w-115 bg-[url(/img/project8.png)] bg-cover bg-no-repeat bg-center h-60 rounded-xl">
+                    <div class="-z-10  h-60 w-full bg-linear-to-t from-black to-0 opacity-0 hover:opacity-100 hover:z-10 rounded-b-xl duration-700">
+                        <h4 class="absolute text-white font-semibold text-2xl pt-42 ps-7">Personal Website</h4>
+                        <p class="absolute text-white font-light text-sm pt-50 ps-7">My own digital space to showcase projects and skills.</p>
                         <button class="absolute text-white font-semibold bg-[var(--biru)] hover:bg-[var(--coklat)] duration-300 px-3.5 py-1 rounded-md mt-47 ms-85"><a href="">See More</a></button>
                     </div>
                 </div>
@@ -107,10 +261,9 @@
     <!-- Project Section End -->
     <!-- Skills Section Start -->
     <span class="flex justify-center w-full h-3  relative bg-[var(--biru)]"></span>
-    <h1 class="text-6xl font-semibold text-start mt-25 ms-180 w-200 ps-5 pe-5 pb-4 pt-2  text-white bg-[var(--coklat)]">Tools & Technologies I Use</h1>
-    <section class="bg-gray-100 py-12" id="tech-stack">
-        <div class="max-w-5xl mx-auto px-4 text-center">
-          <!-- <p class="text-gray-600 mb-10">Some tools and technologies I’ve been working with recently</p> -->
+    <h1 class="text-6xl font-semibold text-start mt-25 ms-180 w-fit px-5 pb-4 pt-2 text-white bg-[var(--coklat)]">Tools & Technologies I Use</h1>
+    <section class="bg-gray-100 py-12 px-4" id="tech-stack">
+        <div class="max-w-5xl mx-auto text-center">
           
           <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 items-center justify-center mt-15">
             <div class="flex flex-col items-center">
@@ -150,48 +303,81 @@
       </section>
     <!-- Skills Section End -->
     <!-- Contact Section Start -->
-     <section class="bg-[var(--coklat)] flex items-center justify-center min-h-100">
-        <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-8 md:mb-0">
-            <p class="text-green-700 mb-2">
-            How can we help you?
-            </p>
-            <h1 class="text-4xl font-bold mb-4">
-            Contact us
-            </h1>
-            <p class="text-gray-700 mb-4">
-            We're here to help and answer any questions you might have. We look forward to hearing from you!
-            </p>
-            <div class="flex items-center mb-2">
-            <i class="fas fa-map-marker-alt text-gray-700 mr-2">
-            </i>
-            <p class="text-gray-700">
-            Ankersgade 12C, 1, 8000 Aarhus
-            </p>
-            </div>
-            <div class="flex items-center mb-2">
-            <i class="fas fa-phone-alt text-gray-700 mr-2">
-            </i>
-            <p class="text-gray-700">
-            +45 71 99 77 07
-            </p>
-            </div>
-            <div class="flex items-center">
-            <i class="fas fa-envelope text-gray-700 mr-2">
-            </i>
-            <a class="text-blue-600" href="mailto:mail@sleeknote.com">
-            mail@sleeknote.com
-            </a>
-            </div>
-            </div>
-            <div class="md:w-1/2 flex justify-center">
-            <img alt="Illustration of a person holding a sign that says 'Hello'" class="w-64 h-64" height="300" src="https://storage.googleapis.com/a1aa/image/5da4yxJVD6pDBe0QU6rWaeykDHkXrwb1l5jL9ymXMDA.jpg" width="300"/>
-            </div>
+     <section class="bg-[var(--coklat)] flex items-center justify-center min-h-full">
+  <div class="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center">
+    <!-- Contact Info -->
+    <div class="md:w-1/2 mb-10 md:mb-0 md:pl-24">
+      <p class="text-green-700 mb-2 font-semibold">
+        How can we help you?
+      </p>
+      <h1 class="text-4xl font-bold mb-4 text-white">
+        Contact Us
+      </h1>
+      <p class="text-gray-200 mb-6 font-medium max-w-md">
+        We're here to help and answer any questions you might have. We look forward to hearing from you!
+      </p>
+
+      <!-- Info Item -->
+      <div class="space-y-4">
+        <div class="flex items-center group">
+          <i class="fa-brands fa-github text-white mr-3 group-hover:text-green-400 transition"></i>
+          <p class="text-white font-semibold">Faisal-Ic</p>
         </div>
-    </section>
+        <div class="flex items-center group">
+          <i class="fas fa-phone-alt text-white mr-3 group-hover:text-green-400 transition"></i>
+          <p class="text-white font-semibold">+62 857-9497-4290</p>
+        </div>
+        <div class="flex items-center group">
+          <i class="fas fa-envelope text-white mr-3 group-hover:text-green-400 transition"></i>
+          <a href="mailto:muhamadfaisal.xpro@gmail.com" class="text-blue-300 hover:underline font-medium">
+            muhamadfaisal.xpro@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <!-- CTA Button -->
+      <div class="mt-6">
+        <a href="mailto:muhamadfaisal.xpro@gmail.com"
+          class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full transition">
+          Say Hello
+        </a>
+      </div>
+    </div>
+
+    <!-- Image Side -->
+    <div class="md:w-1/2 flex justify-center md:pr-16">
+      <div class="h-72 w-72 rounded-xl shadow-lg bg-[url(/img/foto-aul.jpg)] bg-cover bg-center"></div>
+    </div>
+  </div>
+</section>
+
     <!-- Contact Section End -->
     <!-- Footer Section Start -->
-     
+     <footer class="bg-[var(--coklat-tua)] text-white py-6 border-gray-300 ">
+  <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm">
+    <!-- Brand -->
+    <div class="mb-4 md:mb-0">
+      <span class="font-semibold text-lg">faisal.</span> <span class="opacity-70">© 2025</span>
+    </div>
+
+    <!-- Nav Links -->
+    <div class="flex space-x-4 mb-4 md:mb-0">
+      <a href="#about" class="hover:text-green-300 transition">About</a>
+      <a href="#projects" class="hover:text-green-300 transition">Projects</a>
+      <a href="#contact" class="hover:text-green-300 transition">Contact</a>
+    </div>
+
+    <!-- Social -->
+    <div class="flex space-x-4">
+      <a href="https://github.com/Faisal-Ic" target="_blank" class="hover:text-green-300 transition">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="mailto:muhamadfaisal.xpro@gmail.com" class="hover:text-green-300 transition">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+</footer>
 
 
     <!-- Footer Section End -->
